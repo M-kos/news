@@ -1,0 +1,10 @@
+.news-container {
+    @include size(90vw, 90vh);
+    background-image: url("../img/paper.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

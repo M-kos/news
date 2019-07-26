@@ -1,0 +1,7 @@
+.news-item {
+    @include size(20vw, auto);
+    background-image: url("../img/frame.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
