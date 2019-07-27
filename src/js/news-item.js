@@ -1,3 +1,8 @@
+/******************************************************/
+/******receive: Title, Description, Url, UrlImage******/
+/***Creates an DOMelement & inserts it into the page***/
+/******************************************************/
+
 class NewsItem {
     constructor(title, description, url, urlImage) {
         this.title = title;
