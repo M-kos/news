@@ -8,7 +8,7 @@ class GetData {
         this.country = country;
         this.page = page;
         this.pageSize = pageSize;
-        this.url = `https://newsapi.org/v2/top-headlines?country=${this.country}&page=${this.page}&pageSize=${this.pageSize}`;
+        this.url = `https://newsapi.org/v2/everything?sources=lenta,rbc,rt,reuters&language=ru&page=${this.page}&pageSize=${this.pageSize}`;
     }
 
     get() {
@@ -21,8 +21,7 @@ class GetData {
                 if(this.status == 200) {
                     resolve(this.responseText)
                 } else {
-                    let error = new Error(this.statusText);
-                    error.code = this.status;
+                    let error = new Error(this.responseText);
                     reject(error);
                 }
             }
@@ -41,8 +40,9 @@ class GetData {
 
     nextPage(pageNumber, pageSize = 10) {
         this.page = pageNumber;
-        this.url = `https://newsapi.org/v2/top-headlines?country=${this.country}&page=${this.page}&pageSize=${this.pageSize}`;
+        this.url = `https://newsapi.org/v2/everything?sources=lenta,rbc,rt,reuters&language=ru&page=${this.page}&pageSize=${this.pageSize}`;
         return this.get();
+        
     }
 }
 
