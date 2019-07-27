@@ -8,7 +8,7 @@ class NewsItem {
         this.title = title;
         this.description = description;
         this.url = url;
-        this.urlImage = urlImage;
+        this.urlImage = urlImage || "https://via.placeholder.com/500x300&text=OOPS";
     }
 
     create() {
