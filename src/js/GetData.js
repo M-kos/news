@@ -6,7 +6,7 @@ class GetData {
     constructor(key, country) {
         this.key = key;
         this.country = country;
-        this.url = `https://newsapi.org/v2/top-headlines?country=${this.country}&apiKey=${this.key}`;
+        this.url = `https://newsapi.org/v2/top-headlines?country=${this.country}`;
     }
 
     get() {
@@ -28,6 +28,8 @@ class GetData {
             xhr.onerror = function() {
                 reject(new Error("Network Error"));
             }
+
+            xhr.setRequestHeader('X-Api-Key', this.key);
     
             xhr.send();
         });
