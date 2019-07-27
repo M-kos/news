@@ -1,12 +1,14 @@
-/**********************/
-/*receive: API_KEY & Country*/
-/*returns: Promise*/
-/**********************/
+/********************************/
+/***receive: API_KEY & Country***/
+/*******returns: Promise*********/
+/********************************/
 class GetData {
-    constructor(key, country) {
+    constructor(key, country, page, pageSize) {
         this.key = key;
         this.country = country;
-        this.url = `https://newsapi.org/v2/top-headlines?country=${this.country}`;
+        this.page = page;
+        this.pageSize = pageSize;
+        this.url = `https://newsapi.org/v2/top-headlines?country=${this.country}&page=${this.page}&pageSize=${this.pageSize}`;
     }
 
     get() {
@@ -35,6 +37,12 @@ class GetData {
         });
 
         return promise;
+    }
+
+    nextPage(pageNumber, pageSize = 10) {
+        this.page = pageNumber;
+        this.url = `https://newsapi.org/v2/top-headlines?country=${this.country}&page=${this.page}&pageSize=${this.pageSize}`;
+        return this.get();
     }
 }
 
