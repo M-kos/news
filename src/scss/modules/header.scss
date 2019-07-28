@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     text-transform: uppercase;
     font-size: rem(50);
     opacity: .5;
@@ -31,6 +32,15 @@
         text-decoration: underline;
         color: rgba(0,0,0,0.6);
         text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+        font-size: rem(30);
+
+        @media screen and (max-width: $tableWidth) {
+            font-size: rem(20);
+        }
+    
+        @media screen and (max-width: $phoneWidth) {
+            font-size: rem(15);
+        }
 
         span {
             color: $logo-color;
