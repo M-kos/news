@@ -1,7 +1,7 @@
-/********************************/
-/***receive: API_KEY & Country***/
-/*******returns: Promise*********/
-/********************************/
+/************************************************/
+/***receive: API_KEY, Country, page & PageSize***/
+/***************returns: Promise*****************/
+/************************************************/
 class GetData {
     constructor(key, country, page, pageSize) {
         this.key = key;
