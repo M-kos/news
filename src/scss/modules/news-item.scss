@@ -1,7 +1,28 @@
 .news-item {
-    @include size(20vw, auto);
-    background-image: url("../img/frame.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(10);
+    flex-direction: column;
+    transition: all .3s ease;
+    position: relative;
+    background-color: $neutral-regular;
+    color: $neutral-placeholder;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(0.95);
+    }
+
+    .news-item__title {
+        font-weight: bold;
+        padding: rem(10) 0;
+    }
+
+    .news-item__link {
+        @include size(100%, 100%);
+        position: absolute;
+        top: rem(-5);
+    }
 }
