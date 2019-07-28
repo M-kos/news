@@ -1,0 +1,31 @@
+.header {
+    width: 100%;
+    background-color: $neutral-regular;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: rem(50);
+    opacity: .5;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    .title {
+        font-weight: bold;
+        padding: rem(15);
+        color: $neutral-placeholder;
+    }
+    .logo {
+        font-weight: bold;
+        padding: rem(15);
+        text-decoration: underline;
+        color: rgba(0,0,0,0.6);
+        text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+
+        span {
+            color: $logo-color;
+        }
+    }
+}

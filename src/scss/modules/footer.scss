@@ -1,0 +1,49 @@
+.footer {
+    width: 100%;
+    background-color: $neutral-regular;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    opacity: .5;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    .logo {
+        font-weight: bold;
+        padding: rem(15);
+        text-decoration: underline;
+        color: rgba(0,0,0,0.6);
+        text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+        text-transform: uppercase;
+        font-size: rem(50);
+
+        span {
+            color: $logo-color;
+        }
+    }
+
+    .created {
+        font-size: rem(15);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $neutral-primary;
+
+        p {
+            padding: rem(3);
+        }
+    }
+
+    .link-api {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: rem(20);
+        text-align: center;
+        color: $neutral-primary;
+        padding: rem(10);
+    }
+}
