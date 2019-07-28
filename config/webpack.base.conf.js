@@ -61,7 +61,7 @@ module.exports = {
                 MiniCssExtractPlugin.loader,
                 {
                     loader: 'css-loader',
-                    options: { sourceMap: true }
+                    options: { sourceMap: true, url: false }
                 }, {
                     loader: 'postcss-loader',
                     options: { sourceMap: true, config: {path: ''} }
@@ -76,7 +76,7 @@ module.exports = {
                 MiniCssExtractPlugin.loader,
                 {
                     loader: 'css-loader',
-                    options: { sourceMap: true }
+                    options: { sourceMap: true, url: false  }
                 }, {
                     loader: 'postcss-loader',
                     options: { sourceMap: true, config: {path: ''} }
