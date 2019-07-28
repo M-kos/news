@@ -22,6 +22,14 @@
         span {
             color: $logo-color;
         }
+
+        @media screen and (max-width: $tableWidth) {
+            font-size: rem(40);
+        }
+    
+        @media screen and (max-width: $phoneWidth) {
+            font-size: rem(30);
+        }
     }
 
     .created {
@@ -35,6 +43,14 @@
         p {
             padding: rem(3);
         }
+
+        @media screen and (max-width: $tableWidth) {
+            font-size: rem(12);
+        }
+    
+        @media screen and (max-width: $phoneWidth) {
+            font-size: rem(10);
+        }
     }
 
     .link-api {
@@ -45,5 +61,13 @@
         text-align: center;
         color: $neutral-primary;
         padding: rem(10);
+
+        @media screen and (max-width: $tableWidth) {
+            font-size: rem(16);
+        }
+    
+        @media screen and (max-width: $phoneWidth) {
+            font-size: rem(12);
+        }
     }
 }

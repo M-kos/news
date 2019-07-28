@@ -12,6 +12,14 @@
         opacity: 1;
     }
 
+    @media screen and (max-width: $tableWidth) {
+        font-size: rem(40);
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        font-size: rem(30);
+    }
+
     .title {
         font-weight: bold;
         padding: rem(15);
