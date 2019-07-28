@@ -21,4 +21,15 @@
         border-radius: rem(5);
     }
 
+    @media screen and (max-width: $smDesktopWidth) {
+        grid-template-columns: 1fr;
+    }
+
+    @media screen and (max-width: $tableWidth) {
+        @include size(85vw, 80vh);
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        @include size(90vw, 80vh);
+    }
 }
